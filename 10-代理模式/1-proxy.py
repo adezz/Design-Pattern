@@ -75,9 +75,14 @@ class ProtectedProxy(Proxy):
     def set_content(self, content):
         raise PermissionError("无写入权限")
 
+
 # remoteproxy = RemoteProxy('test.txt')
 # print(remoteproxy.get_content())
 
+
+# 虚代理就是需要的时候再取
+vp = VirtualProxy('test.txt')
+print(vp.get_content())
 
 
 # pp = ProtectedProxy('test.txt')
